@@ -1,6 +1,6 @@
 var allowNew = true;
 var newRecord;
-var data = new Array();
+var data = [];
 displayAll();
 document.getElementById('newBtn').addEventListener("click", function() {
     var value = document.getElementById('inputBox').value;
@@ -30,8 +30,7 @@ document.getElementById('addBtn').addEventListener('click', function() {
 });
 document.getElementById('clearBtn').addEventListener('click', function() {
     var ul = document.getElementById('todo');
-    var ulLength = ul.childNodes.length;
-    for(var i = 0; i < ulLength; i++)
+    for(var i=ul.childNodes.length-1;i>=0;i--)
     {
         ul.removeChild(ul.childNodes[i]);
     }
